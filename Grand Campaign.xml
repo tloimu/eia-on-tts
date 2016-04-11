@@ -1,0 +1,332 @@
+<Game name="Empires In Arms" scenario="Grand Campaign">
+
+<Maps>
+	<map name="Normal Map" file="graphics/map.png"/>
+	<map name="Dimmed Map" file="graphics/map_dim.png"/>
+	<map name="Dimmed 2 Map" file="graphics/map_dim2.png"/>
+	<map name="Dimmed 3 Map" file="graphics/map_dim3.png"/>
+</Maps>
+	
+	<Boards>
+		<Board name="Normal Map" background="map.png"/>
+		<Board name="Slightly Dimmed Map" background="map_dim.png"/>
+		<Board name="Dimmed Map" background="map_dim2.png"/>
+		<Board name="Very Dimmed Map" background="map_dim3.png"/>
+		<Board name="Overview" background="smallmap.png" scalex="0.3" scaley="0.3"/>
+	</Boards>
+	
+	<Players>
+		<Player name="France"><Countries><Country name="France"/></Countries></Player>
+		<Player name="Austria"><Countries><Country name="Austria"/></Countries></Player>
+		<Player name="Prussia"><Countries><Country name="Prussia"/></Countries></Player>
+		<Player name="Russia"></Player>
+		<Player name="Great Britain"></Player>
+		<Player name="Turkey"></Player>
+		<Player name="Spain"></Player>
+	</Players>
+		
+	<Markers>
+		<Marker name="france_infantry" front="france_infantry.png"/>
+		<Marker name="france_cavalry" front="france_cavalry.png"/>
+		<Marker name="france_fleet" front="france_fleet.png"/>
+		<Marker name="france_depot" front="france_depot.png"/>
+		
+		<Marker name="austria_infantry" front="austria_infantry.png"/>
+		<Marker name="austria_cavalry" front="austria_cavalry.png"/>
+		<Marker name="austria_fleet" front="austria_fleet.png"/>
+		<Marker name="austria_depot" front="austria_depot.png"/>
+		<Marker name="austria_freikorps" front="austria_freikorps.png"/>
+		
+		<Marker name="sweeden_infantry" front="sweeden_infantry.png"/>
+		<Marker name="sweeden_fleet" front="sweeden_fleet.png"/>
+		
+		<Marker name="garrison_infantry" front="garrison_infantry.png"/>
+		<Marker name="garrison_militia" front="garrison_militia.png"/>
+	</Markers>
+	
+	<Countries>
+		<Country name="France" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="france_infantry" x="1000" y="1000">
+					<UnitItem type="infantry" maxamount="25" sharemax="militia" quality="4.0" amount="5"/>
+					<UnitItem type="militia" maxamount="25" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0" amount="1"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="france_infantry" x="1000" y="1060">
+					<UnitItem type="infantry" maxamount="20" sharemax="militia" quality="4.0" amount="20"/>
+					<UnitItem type="militia" maxamount="20" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0" amount="3"/>
+				</Unit>
+				<Unit name="III" type="corps" marker="france_infantry" x="1005" y="1065">
+					<UnitItem type="infantry" maxamount="20" sharemax="militia" quality="4.0" amount="2"/>
+					<UnitItem type="militia" maxamount="20" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0" amount="1"/>
+				</Unit>
+				<Unit name="IV" type="corps" marker="france_infantry" x="1010" y="1070">
+					<UnitItem type="infantry" maxamount="20" sharemax="militia" quality="4.0"/>
+					<UnitItem type="militia" maxamount="20" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="I C" type="corps" marker="france_cavalry" x="900" y="1150">
+					<UnitItem type="cavalry" maxamount="5" quality="4.0" amount="5"/>
+				</Unit>
+				
+				<Unit name="II C" type="corps" marker="france_cavalry">
+					<UnitItem type="cavalry" maxamount="5" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Artillery" type="corps" marker="france_infantry">
+					<UnitItem type="artillery" maxamount="20" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Guard I" type="corps" marker="france_infantry">
+					<UnitItem type="guard" maxamount="10" quality="4.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Fleet I" type="fleet" marker="france_fleet" x="700" y="1000">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet II" type="fleet" marker="france_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet III" type="fleet" marker="france_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet IV" type="fleet" marker="france_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Napoleon" type="leader" front="napoleon.png" x="1020" y="1080"/>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_militia" static="1" n="*" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Depot" type="depot" marker="france_depot" static="1" x="860" y="1000"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+			</Units>
+		</Country>
+		
+		<Country name="Austria" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="III" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="IV" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="I C" type="corps" marker="austria_cavalry">
+					<UnitItem type="cavalry" maxamount="5" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Fleet I" type="fleet" marker="austria_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Freikorps I" type="freikorps" marker="austria_freikorps" >
+					<UnitItem type="freikorps" amount="1" maxamount="1" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Freikorps II" type="freikorps" marker="austria_freikorps" >
+					<UnitItem type="freikorps" amount="1" maxamount="1" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_militia" n="*" static="1" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" n="*" static="1" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+			</Units>
+		</Country>
+		
+		<Country name="Prussia" type="major">
+			<Units>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+			</Units>
+		</Country>
+		
+		<Country name="Sweeden" type="minor">
+			<Units>
+				<Unit name="I" type="corps" marker="sweeden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="sweeden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="III" type="corps" marker="sweeden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="Fleet I" type="fleet" marker="sweeden_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+			</Units>
+		</Country>
+	</Countries>
+	
+	<Turns current="01/1805" notes="">
+		<Turn name="01/1805"/>
+		<Turn name="02/1805"/>
+		<Turn name="03/1805"><attribute name="economy"/></Turn>
+		<Turn name="04/1805"/>
+		<Turn name="05/1805"/>
+		<Turn name="06/1805"><attribute name="economy"/></Turn>
+		<Turn name="07/1805"/>
+		<Turn name="08/1805"/>
+		<Turn name="09/1805"><attribute name="economy"/></Turn>
+		<Turn name="10/1805"/>
+		<Turn name="11/1805"/>
+		<Turn name="12/1805"><attribute name="economy"/></Turn>
+		<Turn name="01/1806"/>
+		<Turn name="02/1806"/>
+		<Turn name="03/1806"><attribute name="economy"/></Turn>
+		<Turn name="04/1806"/>
+		<Turn name="05/1806"/>
+		<Turn name="06/1806"><attribute name="economy"/></Turn>
+		<Turn name="07/1806"/>
+		<Turn name="08/1806"/>
+		<Turn name="09/1806"><attribute name="economy"/></Turn>
+		<Turn name="10/1806"/>
+		<Turn name="11/1806"/>
+		<Turn name="12/1806"><attribute name="economy"/></Turn>
+		<Turn name="01/1807"/>
+		<Turn name="02/1807"/>
+		<Turn name="03/1807"><attribute name="economy"/></Turn>
+		<Turn name="04/1807"/>
+		<Turn name="05/1807"/>
+		<Turn name="06/1807"><attribute name="economy"/></Turn>
+		<Turn name="07/1807"/>
+		<Turn name="08/1807"/>
+		<Turn name="09/1807"><attribute name="economy"/></Turn>
+		<Turn name="10/1807"/>
+		<Turn name="11/1807"/>
+		<Turn name="12/1807"><attribute name="economy"/></Turn>
+		<Turn name="01/1808"/>
+		<Turn name="02/1808"/>
+		<Turn name="03/1808"><attribute name="economy"/></Turn>
+		<Turn name="04/1808"/>
+		<Turn name="05/1808"/>
+		<Turn name="06/1808"><attribute name="economy"/></Turn>
+		<Turn name="07/1808"/>
+		<Turn name="08/1808"/>
+		<Turn name="09/1808"><attribute name="economy"/></Turn>
+		<Turn name="10/1808"/>
+		<Turn name="11/1808"/>
+		<Turn name="12/1808"><attribute name="economy"/></Turn>
+		<Turn name="01/1809"/>
+		<Turn name="02/1809"/>
+		<Turn name="03/1809"><attribute name="economy"/></Turn>
+		<Turn name="04/1809"/>
+		<Turn name="05/1809"/>
+		<Turn name="06/1809"><attribute name="economy"/></Turn>
+		<Turn name="07/1809"/>
+		<Turn name="08/1809"/>
+		<Turn name="09/1809"><attribute name="economy"/></Turn>
+		<Turn name="10/1809"/>
+		<Turn name="11/1809"/>
+		<Turn name="12/1809"><attribute name="economy"/></Turn>
+		<Turn name="01/1810"/>
+		<Turn name="02/1810"/>
+		<Turn name="03/1810"><attribute name="economy"/></Turn>
+		<Turn name="04/1810"/>
+		<Turn name="05/1810"/>
+		<Turn name="06/1810"><attribute name="economy"/></Turn>
+		<Turn name="07/1810"/>
+		<Turn name="08/1810"/>
+		<Turn name="09/1810"><attribute name="economy"/></Turn>
+		<Turn name="10/1810"/>
+		<Turn name="11/1810"/>
+		<Turn name="12/1810"><attribute name="economy"/></Turn>
+		<Turn name="01/1811"/>
+		<Turn name="02/1811"/>
+		<Turn name="03/1811"><attribute name="economy"/></Turn>
+		<Turn name="04/1811"/>
+		<Turn name="05/1811"/>
+		<Turn name="06/1811"><attribute name="economy"/></Turn>
+		<Turn name="07/1811"/>
+		<Turn name="08/1811"/>
+		<Turn name="09/1811"><attribute name="economy"/></Turn>
+		<Turn name="10/1811"/>
+		<Turn name="11/1811"/>
+		<Turn name="12/1811"><attribute name="economy"/></Turn>
+		<Turn name="01/1812"/>
+		<Turn name="02/1812"/>
+		<Turn name="03/1812"><attribute name="economy"/></Turn>
+		<Turn name="04/1812"/>
+		<Turn name="05/1812"/>
+		<Turn name="06/1812"><attribute name="economy"/></Turn>
+		<Turn name="07/1812"/>
+		<Turn name="08/1812"/>
+		<Turn name="09/1812"><attribute name="economy"/></Turn>
+		<Turn name="10/1812"/>
+		<Turn name="11/1812"/>
+		<Turn name="12/1812"><attribute name="economy"/></Turn>
+		<Turn name="01/1813"/>
+		<Turn name="02/1813"/>
+		<Turn name="03/1813"><attribute name="economy"/></Turn>
+		<Turn name="04/1813"/>
+		<Turn name="05/1813"/>
+		<Turn name="06/1813"><attribute name="economy"/></Turn>
+		<Turn name="07/1813"/>
+		<Turn name="08/1813"/>
+		<Turn name="09/1813"><attribute name="economy"/></Turn>
+		<Turn name="10/1813"/>
+		<Turn name="11/1813"/>
+		<Turn name="12/1813"><attribute name="economy"/></Turn>
+		<Turn name="01/1814"/>
+		<Turn name="02/1814"/>
+		<Turn name="03/1814"><attribute name="economy"/></Turn>
+		<Turn name="04/1814"/>
+		<Turn name="05/1814"/>
+		<Turn name="06/1814"><attribute name="economy"/></Turn>
+		<Turn name="07/1814"/>
+		<Turn name="08/1814"/>
+		<Turn name="09/1814"><attribute name="economy"/></Turn>
+		<Turn name="10/1814"/>
+		<Turn name="11/1814"/>
+		<Turn name="12/1814"><attribute name="economy"/></Turn>
+	</Turns>
+
+</Game>

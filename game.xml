@@ -1,0 +1,980 @@
+<Game name="Empires In Arms" scenario="Grand Campaign">
+
+	<Maps>
+		<map name="Normal Map" file="graphics/map.png"/>
+		<map name="Dimmed Map" file="graphics/map_dim.png"/>
+		<map name="Dimmed 2 Map" file="graphics/map_dim2.png"/>
+		<map name="Dimmed 3 Map" file="graphics/map_dim3.png"/>
+	</Maps>
+	
+	<Players>
+		<Player name="Russia"  colorH="0.3" colorS="0.5" colorB="0.6" position="right">
+			<Countries><Country name="Russia"/></Countries>
+		</Player>
+		<Player name="Turkey" colorH="0.25" colorS="0.2" colorB="0.8" position="right">
+			<Countries>
+				<Country name="Turkey"/>
+				<Country name="Syria"/>
+			</Countries>
+		</Player>
+		<Player name="Austria" colorH="0.0" colorS="0.0" colorB="1.0" position="right">
+			<Countries><Country name="Austria"/></Countries>
+		</Player>
+		<Player name="Prussia"  colorH="0.5" colorS="0.4" colorB="0.8" position="right">
+			<Countries>
+				<Country name="Prussia"/>
+				<Country name="Saxony"/>
+			</Countries>
+		</Player>
+		<Player name="Great Britain" colorH="0.02" colorS="0.6" colorB="0.7" position="left">
+			<Countries><Country name="Great Britain"/></Countries>
+		</Player>
+		<Player name="France"  colorH="0.6" colorS="0.4" colorB="0.8" position="left">
+			<Countries>
+				<Country name="France"/>
+				<Country name="Holland"/>
+			</Countries>
+		</Player>
+		<Player name="Spain"  colorH="0.17" colorS="0.7" colorB="0.9" position="left">
+			<Countries><Country name="Spain"/></Countries>
+		</Player>
+	</Players>
+		
+	<Markers>
+		<Marker name="france_infantry" front="france_infantry.png"/>
+		<Marker name="france_cavalry" front="france_cavalry.png"/>
+		<Marker name="france_fleet" front="france_fleet.png"/>
+		<Marker name="france_depot" front="france_depot.png"/>
+		
+		<Marker name="austria_infantry" front="austria_infantry.png"/>
+		<Marker name="austria_cavalry" front="austria_cavalry.png"/>
+		<Marker name="austria_fleet" front="austria_fleet.png"/>
+		<Marker name="austria_depot" front="austria_depot.png"/>
+		<Marker name="austria_freikorps" front="austria_freikorps.png"/>
+
+		<Marker name="russia_infantry" front="russia_infantry.png"/>
+		<Marker name="russia_cavalry" front="russia_cavalry.png"/>
+		<Marker name="russia_fleet" front="russia_fleet.png"/>
+		<Marker name="russia_depot" front="russia_depot.png"/>
+
+		<Marker name="prussia_infantry" front="prussia_infantry.png"/>
+		<Marker name="prussia_cavalry" front="prussia_cavalry.png"/>
+		<Marker name="prussia_fleet" front="prussia_fleet.png"/>
+		<Marker name="prussia_depot" front="prussia_depot.png"/>
+
+		<Marker name="gb_infantry" front="gb_infantry.png"/>
+		<Marker name="gb_cavalry" front="gb_cavalry.png"/>
+		<Marker name="gb_fleet" front="gb_fleet.png"/>
+		<Marker name="gb_depot" front="gb_depot.png"/>
+
+		<Marker name="spain_infantry" front="spain_infantry.png"/>
+		<Marker name="spain_cavalry" front="spain_cavalry.png"/>
+		<Marker name="spain_fleet" front="spain_fleet.png"/>
+		<Marker name="spain_depot" front="spain_depot.png"/>
+
+		<Marker name="turkey_infantry" front="turkey_infantry.png"/>
+		<Marker name="turkey_cavalry" front="turkey_cavalry.png"/>
+		<Marker name="turkey_fleet" front="turkey_fleet.png"/>
+		<Marker name="turkey_depot" front="turkey_depot.png"/>
+
+		<Marker name="sweeden_infantry" front="sweeden_infantry.png" text="Sweeden" textY="2"/>
+		<Marker name="sweeden_fleet" front="sweeden_fleet.png" text="Sweeden" textX="2" textY="30"/>
+		
+		<Marker name="holland_infantry" front="minor_infantry.png" text="Holland" textY="2"/>
+		<Marker name="holland_fleet" front="minor_fleet.png" text="Holland" textX="2" textY="30"/>
+		
+		<Marker name="naples_infantry" front="minor_infantry.png" text="Naples" textY="2"/>
+		<Marker name="naples_fleet" front="minor_fleet.png" text="Naples" textX="2" textY="30"/>
+		
+		<Marker name="saxony_infantry" front="minor_infantry.png" text="Saxony" textY="2"/>
+		<Marker name="baden_infantry" front="minor_infantry.png" text="Baden" textY="2"/>
+		<Marker name="wurttenburg_infantry" front="minor_infantry.png" text="Wurtt." textY="2"/>
+
+		<Marker name="morocco_infantry" front="minor_infantry.png" text="Morocco" textY="2"/>
+		<Marker name="syria_infantry" front="minor_infantry.png" text="Syria" textY="2"/>
+		
+		<Marker name="garrison_infantry" front="garrison_infantry.png"/>
+		<Marker name="garrison_militia" front="garrison_militia.png"/>
+		<Marker name="napoleon" front="napoleon.png"/>
+	</Markers>
+	
+	<Countries>
+		<Country name="France" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="france_infantry" x="1000" y="1000">
+					<UnitItem type="infantry" maxamount="25" sharemax="militia" quality="4.0" amount="5"/>
+					<UnitItem type="militia" maxamount="25" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0" amount="1"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="france_infantry" x="1000" y="1060">
+					<UnitItem type="infantry" maxamount="20" sharemax="militia" quality="4.0" amount="20"/>
+					<UnitItem type="militia" maxamount="20" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0" amount="3"/>
+				</Unit>
+				<Unit name="III" type="corps" marker="france_infantry" x="1005" y="1065">
+					<UnitItem type="infantry" maxamount="20" sharemax="militia" quality="4.0" amount="2"/>
+					<UnitItem type="militia" maxamount="20" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0" amount="1"/>
+				</Unit>
+				<Unit name="IV" type="corps" marker="france_infantry" x="1010" y="1070">
+					<UnitItem type="infantry" maxamount="20" sharemax="militia" quality="4.0"/>
+					<UnitItem type="militia" maxamount="20" sharemax="infantry" quality="2.0" amount="2"/>
+					<UnitItem type="cavalry" maxamount="3" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="I C" type="corps" marker="france_cavalry" x="900" y="1150">
+					<UnitItem type="cavalry" maxamount="5" quality="4.0" amount="5"/>
+				</Unit>
+				
+				<Unit name="II C" type="corps" marker="france_cavalry">
+					<UnitItem type="cavalry" maxamount="5" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Artillery" type="corps" marker="france_infantry">
+					<UnitItem type="artillery" maxamount="20" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Guard I" type="corps" marker="france_infantry">
+					<UnitItem type="guard" maxamount="10" quality="4.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Fleet I" type="fleet" marker="france_fleet" x="700" y="1000">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet II" type="fleet" marker="france_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet III" type="fleet" marker="france_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet IV" type="fleet" marker="france_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Napoleon" type="leader" marker="napoleon" x="1020" y="1080"/>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Depot" type="depot" marker="france_depot" static="1" x="860" y="1000"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="france_depot" static="1"/>
+				
+				<Unit name="Garrison I" type="garrison" marker="garrison_infantry" static="1" drawamount="infantry" x="1100" y="1200">
+					<UnitItem type="infantry" maxamount="99" amount="7" quality="2.0"/>
+				</Unit>
+				<Unit name="Garrison II" type="garrison" marker="garrison_infantry" static="1" drawamount="militia" x="1150" y="1200">
+					<UnitItem type="militia" maxamount="99" amount="5" quality="2.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Austria" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="III" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="IV" type="corps" marker="austria_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="I C" type="corps" marker="austria_cavalry">
+					<UnitItem type="cavalry" maxamount="5" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Fleet I" type="fleet" marker="austria_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Freikorps I" type="freikorps" marker="austria_freikorps" >
+					<UnitItem type="freikorps" amount="1" maxamount="1" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Freikorps II" type="freikorps" marker="austria_freikorps" >
+					<UnitItem type="freikorps" amount="1" maxamount="1" quality="3.0"/>
+				</Unit>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_militia" n="*" static="1" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" n="*" static="1" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+				
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="austria_depot" static="1"/>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+			</Units>
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Prussia" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="prussia_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="prussia_depot" static="1"/>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+			</Units>
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+
+		<Country name="Russia" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="russia_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="russia_depot" static="1"/>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+
+		<Country name="Great Britain" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="gb_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="gb_depot" static="1"/>
+				
+				<Unit name="Militia garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="militia" ingame="1">
+					<UnitItem type="militia" maxamount="99" amount="1" quality="2.0"/>
+				</Unit>
+				<Unit name="Infantry garrison" type="garrison" marker="garrison_infantry" static="1" n="*" drawamount="infantry" ingame="1">
+					<UnitItem type="infantry" maxamount="99" amount="1" quality="4.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+
+		<Country name="Turkey" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="turkey_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="turkey_depot" static="1"/>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+
+		<Country name="Spain" type="major">
+			<Units>
+				<Unit name="I" type="corps" marker="spain_infantry">
+					<UnitItem type="infantry" maxamount="15" sharemax="militia" quality="3.0"/>
+					<UnitItem type="militia" maxamount="15" sharemax="infantry" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="1" quality="4.0"/>
+				</Unit>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+				<Unit name="Depot" type="depot" marker="spain_depot" static="1"/>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/><Cell edit="1"/><Cell text=""/></Row>
+				<Row><Cell na="1"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/><Cell text="$"/><Cell text="MP"/></Row>
+				<Row><Cell text="Start"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Base Provinces"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/><Cell text="91"/><Cell text="30"/></Row>
+				<Row><Cell text="Ceded In"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Ceded Out"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Conquered"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Trade Britain"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Trade America"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Total Income"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reparations"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Manipulation"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Remaining"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Running costs:"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/><Cell na="1"/></Row>
+				<Row><Cell na="1"/><Cell text="apr:"/><Cell edit="1"/><Cell text="jul:"/><Cell edit="1"/><Cell text="oct:"/><Cell edit="1"/><Cell text="jan:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="may:"/><Cell edit="1"/><Cell text="aug:"/><Cell edit="1"/><Cell text="nov:"/><Cell edit="1"/><Cell text="feb:"/><Cell edit="1"/></Row>
+				<Row><Cell na="1"/><Cell text="jun:"/><Cell edit="1"/><Cell text="sep:"/><Cell edit="1"/><Cell text="dec:"/><Cell edit="1"/><Cell text="mar:"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL End"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+			</Economy>
+		</Country>
+
+
+		<Country name="Sweeden" type="minor">
+			<Units>
+				<Unit name="I" type="corps" marker="sweeden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="sweeden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="III" type="corps" marker="sweeden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="Fleet I" type="fleet" marker="sweeden_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Naples" type="minor">
+			<Units>
+				<Unit name="I" type="corps" marker="naples_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="II" type="corps" marker="naples_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+				<Unit name="Fleet I" type="fleet" marker="naples_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Holland" type="minor">
+			<Units>
+				<Unit name="Holland" type="corps" marker="holland_infantry">
+					<UnitItem type="infantry" maxamount="12" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="3.0"/>
+				</Unit>
+				<Unit name="Fleet" type="fleet" marker="holland_fleet">
+					<UnitItem type="ships" maxamount="30" quality="3.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Syria" type="minor">
+			<Units>
+				<Unit name="Syria" type="corps" marker="syria_infantry">
+					<UnitItem type="infantry" maxamount="6" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="12" quality="3.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Morocco" type="minor">
+			<Units>
+				<Unit name="Morocco" type="corps" marker="morocco_infantry">
+					<UnitItem type="infantry" maxamount="5" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="5" quality="3.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Saxony" type="minor">
+			<Units>
+				<Unit name="Saxony" type="corps" marker="saxony_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="2.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Baden" type="minor">
+			<Units>
+				<Unit name="Baden" type="corps" marker="baden_infantry">
+					<UnitItem type="infantry" maxamount="8" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="4.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+		
+		<Country name="Wurttenburg" type="minor">
+			<Units>
+				<Unit name="Wurttenburg" type="corps" marker="wurttenburg_infantry">
+					<UnitItem type="infantry" maxamount="6" quality="3.0"/>
+					<UnitItem type="cavalry" maxamount="2" quality="3.0"/>
+				</Unit>
+			</Units>
+			
+			<Economy>
+				<Row><Cell text="Economy"/></Row>
+				<Row><Cell/><Cell text="March"/><Cell/><Cell text="June"/><Cell/><Cell text="Sept."/><Cell/><Cell text="Dec."/></Row>
+				<Row><Cell text="Provinces"/><Cell text=""/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="0"/><Cell text="30"/></Row>
+				<Row><Cell text="Trade"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Loans/subs"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="TOTAL Available"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Corps"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Fleets"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Depots"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="Cavalry $15/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Guard $7/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Infantry $3/2MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Militia $0/2MP"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Shipts $10/1MP"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="TOTAL Cost"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/><Cell edit="1"/></Row>
+				<Row><Cell text="Reinforces:"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/><Cell edit="1"/><Cell na="1"/></Row>
+				<Row><Cell text="M2"/><Cell na="1"/><Cell text="may C:"/><Cell edit="1"/><Cell text="aug C:"/><Cell edit="1"/><Cell text="nov C:"/><Cell edit="1"/><Cell text="feb C:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun I:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec I:"/><Cell edit="1"/><Cell text="mar I:"/><Cell edit="1"/></Row>
+				<Row><Cell text="M3"/><Cell na="1"/><Cell text="jun S:"/><Cell edit="1"/><Cell text="sep I:"/><Cell edit="1"/><Cell text="dec S:"/><Cell edit="1"/><Cell text="mar S:"/><Cell edit="1"/></Row>
+			</Economy>
+		</Country>
+	</Countries>
+	
+	<Turns current="01/1805" notes="">
+		<Turn name="01/1805"/>
+		<Turn name="02/1805"/>
+		<Turn name="03/1805"><attribute name="economy"/></Turn>
+		<Turn name="04/1805"/>
+		<Turn name="05/1805"/>
+		<Turn name="06/1805"><attribute name="economy"/></Turn>
+		<Turn name="07/1805"/>
+		<Turn name="08/1805"/>
+		<Turn name="09/1805"><attribute name="economy"/></Turn>
+		<Turn name="10/1805"/>
+		<Turn name="11/1805"/>
+		<Turn name="12/1805"><attribute name="economy"/></Turn>
+		<Turn name="01/1806"/>
+		<Turn name="02/1806"/>
+		<Turn name="03/1806"><attribute name="economy"/></Turn>
+		<Turn name="04/1806"/>
+		<Turn name="05/1806"/>
+		<Turn name="06/1806"><attribute name="economy"/></Turn>
+		<Turn name="07/1806"/>
+		<Turn name="08/1806"/>
+		<Turn name="09/1806"><attribute name="economy"/></Turn>
+		<Turn name="10/1806"/>
+		<Turn name="11/1806"/>
+		<Turn name="12/1806"><attribute name="economy"/></Turn>
+		<Turn name="01/1807"/>
+		<Turn name="02/1807"/>
+		<Turn name="03/1807"><attribute name="economy"/></Turn>
+		<Turn name="04/1807"/>
+		<Turn name="05/1807"/>
+		<Turn name="06/1807"><attribute name="economy"/></Turn>
+		<Turn name="07/1807"/>
+		<Turn name="08/1807"/>
+		<Turn name="09/1807"><attribute name="economy"/></Turn>
+		<Turn name="10/1807"/>
+		<Turn name="11/1807"/>
+		<Turn name="12/1807"><attribute name="economy"/></Turn>
+		<Turn name="01/1808"/>
+		<Turn name="02/1808"/>
+		<Turn name="03/1808"><attribute name="economy"/></Turn>
+		<Turn name="04/1808"/>
+		<Turn name="05/1808"/>
+		<Turn name="06/1808"><attribute name="economy"/></Turn>
+		<Turn name="07/1808"/>
+		<Turn name="08/1808"/>
+		<Turn name="09/1808"><attribute name="economy"/></Turn>
+		<Turn name="10/1808"/>
+		<Turn name="11/1808"/>
+		<Turn name="12/1808"><attribute name="economy"/></Turn>
+		<Turn name="01/1809"/>
+		<Turn name="02/1809"/>
+		<Turn name="03/1809"><attribute name="economy"/></Turn>
+		<Turn name="04/1809"/>
+		<Turn name="05/1809"/>
+		<Turn name="06/1809"><attribute name="economy"/></Turn>
+		<Turn name="07/1809"/>
+		<Turn name="08/1809"/>
+		<Turn name="09/1809"><attribute name="economy"/></Turn>
+		<Turn name="10/1809"/>
+		<Turn name="11/1809"/>
+		<Turn name="12/1809"><attribute name="economy"/></Turn>
+		<Turn name="01/1810"/>
+		<Turn name="02/1810"/>
+		<Turn name="03/1810"><attribute name="economy"/></Turn>
+		<Turn name="04/1810"/>
+		<Turn name="05/1810"/>
+		<Turn name="06/1810"><attribute name="economy"/></Turn>
+		<Turn name="07/1810"/>
+		<Turn name="08/1810"/>
+		<Turn name="09/1810"><attribute name="economy"/></Turn>
+		<Turn name="10/1810"/>
+		<Turn name="11/1810"/>
+		<Turn name="12/1810"><attribute name="economy"/></Turn>
+		<Turn name="01/1811"/>
+		<Turn name="02/1811"/>
+		<Turn name="03/1811"><attribute name="economy"/></Turn>
+		<Turn name="04/1811"/>
+		<Turn name="05/1811"/>
+		<Turn name="06/1811"><attribute name="economy"/></Turn>
+		<Turn name="07/1811"/>
+		<Turn name="08/1811"/>
+		<Turn name="09/1811"><attribute name="economy"/></Turn>
+		<Turn name="10/1811"/>
+		<Turn name="11/1811"/>
+		<Turn name="12/1811"><attribute name="economy"/></Turn>
+		<Turn name="01/1812"/>
+		<Turn name="02/1812"/>
+		<Turn name="03/1812"><attribute name="economy"/></Turn>
+		<Turn name="04/1812"/>
+		<Turn name="05/1812"/>
+		<Turn name="06/1812"><attribute name="economy"/></Turn>
+		<Turn name="07/1812"/>
+		<Turn name="08/1812"/>
+		<Turn name="09/1812"><attribute name="economy"/></Turn>
+		<Turn name="10/1812"/>
+		<Turn name="11/1812"/>
+		<Turn name="12/1812"><attribute name="economy"/></Turn>
+		<Turn name="01/1813"/>
+		<Turn name="02/1813"/>
+		<Turn name="03/1813"><attribute name="economy"/></Turn>
+		<Turn name="04/1813"/>
+		<Turn name="05/1813"/>
+		<Turn name="06/1813"><attribute name="economy"/></Turn>
+		<Turn name="07/1813"/>
+		<Turn name="08/1813"/>
+		<Turn name="09/1813"><attribute name="economy"/></Turn>
+		<Turn name="10/1813"/>
+		<Turn name="11/1813"/>
+		<Turn name="12/1813"><attribute name="economy"/></Turn>
+		<Turn name="01/1814"/>
+		<Turn name="02/1814"/>
+		<Turn name="03/1814"><attribute name="economy"/></Turn>
+		<Turn name="04/1814"/>
+		<Turn name="05/1814"/>
+		<Turn name="06/1814"><attribute name="economy"/></Turn>
+		<Turn name="07/1814"/>
+		<Turn name="08/1814"/>
+		<Turn name="09/1814"><attribute name="economy"/></Turn>
+		<Turn name="10/1814"/>
+		<Turn name="11/1814"/>
+		<Turn name="12/1814"><attribute name="economy"/></Turn>
+	</Turns>
+
+</Game>
